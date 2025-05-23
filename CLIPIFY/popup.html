@@ -1,17 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Clipify</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
   <h2>Clipify</h2>
-  <ul id="clipboardList"></ul>
-
-  <textarea id="clipInput" placeholder="Copy something, then click 'Save'"></textarea>
-  <button id="saveClip">Save</button>
-  <button id="clearClips">Clear All</button>
-  <div id="flashIcon">[]</div>
+  <input type="text" id="searchInput" placeholder="Search clipboard history..." aria-label="Search clipboard history">
+  <ul id="clipboardList" role="listbox" aria-label="Clipboard history items"></ul>
+  <textarea id="clipInput" placeholder="Enter text, then click 'Save'" aria-label="Input for clipboard text"></textarea>
+  <div class="button-group">
+    <button id="saveClip">Save</button>
+    <button id="clearClips">Clear All</button>
+  </div>
+  <div id="flashIcon" style="display: none;">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+  <div id="contextMenu" class="context-menu" style="display: none;">
+    <div class="context-menu-item" data-action="copy">Copy</div>
+    <div class="context-menu-item" data-action="delete">Delete</div>
+    <div class="context-menu-item" data-action="favorite">Favorite</div>
+  </div>
   <script src="popup.js"></script>
 </body>
 </html>

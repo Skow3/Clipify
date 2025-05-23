@@ -4,7 +4,7 @@
   "version": "1.0",
   "author": "Skowport",
   "description": "Clipboard manager that lets you view and paste recent clipboard items via Ctrl+Shift+V.",
-  "permissions": ["storage", "scripting"],
+  "permissions": ["storage", "scripting", "contextMenus"],
   "background": {
     "service_worker": "background.js"
   },
