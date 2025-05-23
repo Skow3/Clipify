@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Clipify",
+  "version": "1.0",
+  "author": "Skowport",
+  "description": "Clipboard manager that lets you view and paste recent clipboard items via Ctrl+Shift+V.",
+  "permissions": ["storage", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "show_clipboard_dialog": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+V"
+      },
+      "description": "Show clipboard history dialog"
+    }
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "128": "icons/nnicon128.png"
+  }
+}
