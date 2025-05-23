@@ -68,15 +68,6 @@ You can customize the keyboard shortcut:
 * `commands`: To listen for keyboard shortcut
 * `scripting`: (If used later for advanced clipboard injections)
 
----
-
-## 📷 Screenshot
-
-![Clipify Screenshot](screenshot.png)
-
-> You can add your own screenshot here showing the extension popup.
-
----
 
 ## 🧑‍💻 Author
 
